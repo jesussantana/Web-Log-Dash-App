@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.express as px
 
-path = r'data/Logs-App.csv'
+path = r'data/Logs_export.csv'
 df = pd.read_csv(path, engine='python')
 
 df1= df.groupby('DNS')[['IP']].count().sort_values(by='IP',ascending=False).reset_index().head(5)
