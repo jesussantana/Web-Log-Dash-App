@@ -150,9 +150,9 @@ content_first_row = dbc.Row([
 
                 dbc.CardBody(
                     [
-                        html.H4(id='card_title_1', children=['card-title1'], className='card-title',
+                        html.H4(id='card_title_1', children=[df.DNS], className='card-title',
                                 style=CARD_TEXT_STYLE),
-                        html.P(id='card_text_1', children=['Report'], style=CARD_TEXT_STYLE),
+                        html.P(id='card_text_1', children=['Country'], style=CARD_TEXT_STYLE),
                     ]
                 )
             ]
