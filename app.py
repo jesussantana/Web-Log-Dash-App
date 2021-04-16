@@ -6,9 +6,6 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.express as px
 
-import sys
-print(sys.version)
-
 path = r'data/Logs-App.csv'
 df = pd.read_csv(path, engine='python')
 
@@ -257,6 +254,7 @@ content = html.Div(
 
 # Initialize app
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title = 'Web Log Dash App'
 app.layout = html.Div([sidebar, content])
 server = app.server
 
