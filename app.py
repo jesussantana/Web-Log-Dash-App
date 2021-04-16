@@ -258,6 +258,7 @@ content = html.Div(
 # Initialize app
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout = html.Div([sidebar, content])
+server = app.server
 
 # sample callback for a graph
 @app.callback(
