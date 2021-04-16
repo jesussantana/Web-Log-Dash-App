@@ -253,7 +253,9 @@ content = html.Div(
 )
 
 # Initialize app
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+    external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.title = 'Web Log Dash App'
 app.layout = html.Div([sidebar, content])
 server = app.server
