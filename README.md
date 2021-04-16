@@ -1,7 +1,7 @@
 # IT Academy - Data Science with Python
 ## Web Log Dash App  
 
-### [Web Log Dash App Github Repo](https://github.com/jesussantana/web-log-dash)  
+### [Web Log Dash App Github Repo](https://github.com/jesussantana/Web-Log-Dash-App)  
 ### [Web Log Dash App Deploy](https://web-log-dashboard.herokuapp.com/)  
 
 
