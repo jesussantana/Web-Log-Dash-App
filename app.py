@@ -150,9 +150,9 @@ content_first_row = dbc.Row([
 
                 dbc.CardBody(
                     [
-                        html.H4(id='card_title_1', children=[df.DNS], className='card-title',
+                        html.H4(id='card_title_1', children=['Card Title 1'], className='card-title',
                                 style=CARD_TEXT_STYLE),
-                        html.P(id='card_text_1', children=['Country'], style=CARD_TEXT_STYLE),
+                        html.P(id='card_text_1', children=['Sample text.'], style=CARD_TEXT_STYLE),
                     ]
                 )
             ]
@@ -275,8 +275,8 @@ def update_graph_1(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df.DNS,
-            'y': df.IP,
+            'x': df1.DNS,
+            'y': df1.IP,
             'type': 'bar',
             'color': 'seagreen',
             
@@ -299,8 +299,8 @@ def update_graph_2(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df.DNS,
-            'y': df.COUNTRY_NAME,
+            'x': df2.DNS,
+            'y': df2.COUNTRY_NAME,
             'type': 'bar',
             'orientation':'h',
             'color': 'salmon',
@@ -324,8 +324,8 @@ def update_graph_3(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df.CITY,
-            'y': df.DNS,
+            'x': df3.CITY,
+            'y': df3.DNS,
             'type': 'bar',
             'color': 'royalblue',
         }]
