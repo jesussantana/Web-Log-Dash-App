@@ -278,7 +278,7 @@ def update_graph_1(n_clicks, dropdown_value, range_slider_value, check_list_valu
             'x': df1.DNS,
             'y': df1.IP,
             'type': 'bar',
-            'color': 'seagreen',
+            'marker':dict(color='Green'),
             
         }]
     }
@@ -303,7 +303,7 @@ def update_graph_2(n_clicks, dropdown_value, range_slider_value, check_list_valu
             'y': df2.COUNTRY_NAME,
             'type': 'bar',
             'orientation':'h',
-            'color': 'salmon',
+            'marker':dict(color='MediumPurple'),
             
         }]
     }
@@ -327,7 +327,7 @@ def update_graph_3(n_clicks, dropdown_value, range_slider_value, check_list_valu
             'x': df3.CITY,
             'y': df3.DNS,
             'type': 'bar',
-            'color': 'royalblue',
+            'marker':dict(color='Red'),
         }]
     }
     return fig
@@ -350,6 +350,7 @@ def update_graph_4(n_clicks, dropdown_value, range_slider_value, check_list_valu
                         lon=df.LONGITUDE,
                         hover_name=df.CITY, 
                         projection='natural earth')
+                        
     fig.update_layout({
                         'height': 600
     })
