@@ -52,15 +52,15 @@ controls = dbc.FormGroup(
             id='dropdown',
             options=[{
                 'label': 'Value One',
-                'value': 'value1'
+                'value': df.DATE
             },
                 {
                     'label': 'Value Two',
-                    'value': 'value2'
+                    'value': df.COUNTRY_NAME
                 },
                 {
                     'label': 'Value Three',
-                    'value': 'value3'
+                    'value': df.CITY
                 }
             ],
             value=['value1'],  # default value
@@ -150,7 +150,7 @@ content_first_row = dbc.Row([
 
                 dbc.CardBody(
                     [
-                        html.H4(id='card_title_1', children=['akumenius.com'], className='card-title',
+                        html.H4(id='card_title_1', children=['card-title1'], className='card-title',
                                 style=CARD_TEXT_STYLE),
                         html.P(id='card_text_1', children=['Report'], style=CARD_TEXT_STYLE),
                     ]
@@ -275,8 +275,8 @@ def update_graph_1(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df1.DNS,
-            'y': df1.IP,
+            'x': df.DNS,
+            'y': df.IP,
             'type': 'bar',
             'color': 'seagreen',
             
@@ -299,8 +299,8 @@ def update_graph_2(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df2.DNS,
-            'y': df2.COUNTRY_NAME,
+            'x': df.DNS,
+            'y': df.COUNTRY_NAME,
             'type': 'bar',
             'orientation':'h',
             'color': 'salmon',
@@ -324,8 +324,8 @@ def update_graph_3(n_clicks, dropdown_value, range_slider_value, check_list_valu
     print(radio_items_value)
     fig = {
         'data': [{
-            'x': df3.CITY,
-            'y': df3.DNS,
+            'x': df.CITY,
+            'y': df.DNS,
             'type': 'bar',
             'color': 'royalblue',
         }]
